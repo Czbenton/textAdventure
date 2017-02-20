@@ -15,7 +15,7 @@ public class Game {
         player.findItem("boots");
         player.findItem("belt");
 
-        Enemy ogre = new Enemy("Ogre", 100, 10);
+        Enemy ogre = new Enemy("Ogre", 100, 25);
 
         player.battle(ogre);
     }

@@ -23,7 +23,7 @@ public class Player extends Character {
     }
 
     public void chooseWeapon() throws Exception {
-        System.out.println("Choose your weapon: Gun or Magic?");
+        System.out.println("Choose your weapon: Gun, Magic, or Sword?");
 
         boolean continueLoop = true;
         while (continueLoop) {
@@ -34,6 +34,8 @@ public class Player extends Character {
             } else if (weapon.equalsIgnoreCase("magic")) {
                 System.out.println("Magic is an old and powerful weapon of Eld. Wield it well, Wizard.\n");
                 continueLoop = false;
+            } else if (weapon.equalsIgnoreCase("sword")) {
+                System.out.println("You are a brute who strays from the path. Good luck.");
             } else {
                 System.out.println("Do not play games with me traveler, choose a weapon!\n");
             }
@@ -66,6 +68,9 @@ public class Player extends Character {
             System.out.println("You picked up an item!");
         } else {
             System.out.println("You discard the " + item);
+        }
+        if (items.contains("shield")){
+            health += 25;
         }
     }
 }

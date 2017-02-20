@@ -6,13 +6,14 @@ public class Character {
     int health;
     int damage;
 
-    public void battle(Character enemy) {
+    public void battle(Character enemy) throws InterruptedException {
         System.out.printf("%s appears!\n", enemy.name);
 
         while (health > 0 && enemy.health > 0) {
             health -= enemy.damage;
             enemy.health -= damage;
             System.out.printf("%s's health: %d\n", name, health);
+            Thread.sleep(100);
             System.out.printf("%s's health: %d\n", enemy.name, enemy.health);
         }
 
